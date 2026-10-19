@@ -1,0 +1,122 @@
+<template>
+
+    <lightning-card title="Hospital Dashboard">
+      <template if:true={isLoading}>
+         <lightning-spinner  alternative-text="Loading Dashboard.."  size="medium"
+           variant="base">
+          </lightning-spinner>
+      </template>
+
+        <div class="dashboard-container">
+
+            <!-- Total Patients -->
+            <div class="dashboard-card">
+                <lightning-icon icon-name="standard:people" size="medium">
+                </lightning-icon>
+                <div class="card-title">Total Patients</div>
+                <div class="card-value"> {totalPatinetsCount} </div>
+            </div>
+
+            <!-- Total Doctors -->
+            <div class="dashboard-card">
+                <lightning-icon icon-name="standard:employee" size="medium">
+                </lightning-icon>
+                <div class="card-title"> Total Doctors</div>
+                <div class="card-value">{totalDoctorsCount}</div>
+            </div>
+
+
+            <!-- Today's Appointments -->
+            <div class="dashboard-card">
+                <lightning-icon  icon-name="standard:event" size="medium">
+                </lightning-icon>
+                <div class="card-title"> Today's Appointments </div>
+                <div class="card-value"> {todayAppointmentCount} </div>
+               
+            </div>
+
+
+            <!-- Pending Bills -->
+            <div class="dashboard-card">
+                <lightning-icon icon-name="standard:contract" size="medium">
+                </lightning-icon>
+                <div class="card-titile">Pending Bills</div>
+                <div class="card-value"> {pendingBillsCount}</div>
+            </div>
+
+
+            <!-- Total Revenue -->
+            <div class="dashboard-card">
+                <lightning-icon icon-name="standard:currency" size="medium">
+                </lightning-icon>
+                <div class="card-title"> Total Revenue </div>
+                <div class="card-value"> ₹{totalRevenueSum} </div>
+            </div>
+
+        </div>
+
+        <lightning-button 
+          variant="brand"
+          label="Refresh Dashboard"  icon-name="utility:refresh"
+          onclick={handleRefreshDashboard} 
+        ></lightning-button>
+    </lightning-card>
+    <br/><br/>
+    <lightning-card title="Latest Appointment Details" >
+     <div class="data-table">
+       <!--
+        <c-appointment-status-datatable
+            key-field="Id"
+            data={latestAppointments}
+            columns={cols}
+            onrowaction={handleRowAction}>
+        </c-appointment-status-datatable>
+            -->
+
+        
+        <lightning-datatable
+            key-field="id"
+            data={latestAppointments}
+            columns={cols}
+            onrowaction={handleRowAction} >
+          </lightning-datatable>
+        
+     </div>
+    </lightning-card>
+
+    <lightning-card title="Search Patients">
+         <div class="search-container">
+            <div class="search-input">
+            <lightning-input 
+              type="search"
+              label="Patient Name" placeholder="Search for Patient" value={patientName}
+              onchange={handlePatientOnChange}>
+            </lightning-input>
+            </div>
+            <div class="search-button">
+            <lightning-button class="slds_m_top_small"
+              variant="brand"
+              label="Search"  icon-name="utility:seach"
+              onclick={handlePatientSearch} 
+            ></lightning-button>
+            </div>
+            <div class="clear-input">
+            <lightning-button 
+              variant="neutral"
+              label="Clear" 
+              onclick={handleClear} 
+            ></lightning-button>
+
+         </div>
+         </div>
+         
+            <lightning-datatable
+                key-field="Id"
+                data={patientDetails} onrowaction={handleRowAction}
+                columns={patientCols} onrowselection={handlePatientRowSelection} >
+            </lightning-datatable>
+            
+            <c-patient-details patient-id={selectedPatientId}>
+            </c-patient-details>
+        </lightning-card>
+</template>

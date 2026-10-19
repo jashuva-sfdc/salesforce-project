@@ -1,0 +1,33 @@
+<template>
+    <div>
+        <lightning-card  variant="Narrow"  title="Meta Configuration Compo" icon-name="standard:account">
+       
+
+            <p>
+                {objectApiName}
+            </p>
+            <p>
+                {fieldApiName}
+            </p>
+            <p>
+                {recordId}
+            </p>
+            <p>
+                {noOfRecords}
+            </p>
+        <lightning-input type="text" variant="standard" name="name" 
+        label="Enter Your Name" placeholder="type your name..." required="">
+        </lightning-input> 
+        <lightning-input type="text" variant="standard" name="email" 
+        label="Enter Your Email" placeholder="type your email..." required="true">
+        </lightning-input>
+        <lightning-input type="number" variant="standard" name="phone" 
+        label="Enter Your Phone" placeholder="type your phone..." required="true">
+        </lightning-input>   
+
+        <br/>
+        <lightning-button label="create " variant="neutral" ></lightning-button>
+        <p slot="footer">Card Footer</p>
+        </lightning-card>
+    </div>
+</template>

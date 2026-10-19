@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Account Details" icon-name="standard:account">
+        <lightning-datatable
+          key-field="id"
+          data={accountsData}
+          columns={accCols}
+        >
+       </lightning-datatable>
+    </lightning-card>
+    <lightning-card title="Contact Details" icon-name="standard:contact">
+        <lightning-datatable
+          key-field="id"
+          data={accountsData}
+          columns={accCols}
+        >
+       </lightning-datatable>
+    </lightning-card>
+    <lightning-card title="Opportunity Details" icon-name="standard:opportunity">
+        <lightning-datatable
+          key-field="id"
+          data={opportunityData}
+          columns={oppCols} >
+        </lightning-datatable>
+    </lightning-card>
+    
+</template>

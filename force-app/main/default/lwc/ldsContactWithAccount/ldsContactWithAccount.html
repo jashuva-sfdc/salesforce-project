@@ -1,0 +1,24 @@
+<template>
+    <div class="conWithAcc">
+     
+        <lightning-input type="text" label="First Name"
+                        name="First Name" required onchange={handleContactInput}>
+        </lightning-input>
+        <lightning-input type="text" label="Last Name"
+                        name="Name" required onchange={handleContactInput}>
+        </lightning-input>
+        <lightning-input type="email" label="Email"
+                        name="Email" required onchange={handleContactInput}>
+        </lightning-input>
+        <lightning-input type="text" label="Phone "
+                        name="Phone" required onchange={handleContactInput}>
+        </lightning-input>
+        <lightning-record-picker label="Accounts"
+                                object-api-name="Account"
+                                onchange={handleAccountChange}>
+        </lightning-record-picker>
+        <br/>
+        <lightning-button variant="brand" label="Create Contact" onclick={s}>
+        </lightning-button>
+    </div>
+</template>

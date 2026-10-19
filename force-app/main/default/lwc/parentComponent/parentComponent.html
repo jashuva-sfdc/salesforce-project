@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Patient Component" >
+      <lightning-input type="text" label="Patient Name" name="pName" onchange={handleOnChange}>
+      </lightning-input>
+      <lightning-input type="number" label="Patient Age" name="pAge" onchange={handleOnChange}>
+      </lightning-input>
+      <lightning-input type="text" label="Patient Gender" name="pGender" onchange={handleOnChange}>
+      </lightning-input>
+    <lightning-button 
+      variant="brand"
+      label="Send Data To Child" 
+      onclick={handleClick}>
+    </lightning-button>
+    <p>Show Data: {showData}</p>
+
+    <template if:true={showData}>
+          <p>IF CONDITION IS WORKING</p>
+
+         <c-child-component patient-name={patientName} patient-gender={patientGender} 
+                       patient-age={patientAge}
+                       >
+        </c-child-component>
+    </template>
+    <c-child-component onsenddata={handleChildData}></c-child-component>
+    </lightning-card>
+    <p><strong>Status </strong> Received from Child :{childStatus}</p>
+</template>

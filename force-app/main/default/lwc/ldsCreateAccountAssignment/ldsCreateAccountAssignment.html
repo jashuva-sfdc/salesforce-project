@@ -1,0 +1,22 @@
+<template>
+    <lightning-card   title="Account Page" icon-name="standard:account">
+        <lightning-input type="text" name="Name" label="Account Name" required="true"
+        onchange={handleChangeAccInput}>
+        </lightning-input>
+        <lightning-input type="text" name="Phone" label="Account Phone" required="true"
+        onchange={handleChangeAccInput}>
+        </lightning-input>
+        <lightning-combobox
+            name="Industry"
+            label="Industry"
+            value={value}
+            placeholder="Select Progress"
+            options={industryOptions}
+            onchange={handleChangeAccInput} ></lightning-combobox>
+        <p slot="footer">Card Footer</p>
+
+        <br/>
+        <lightning-button variant="brand" label="Create Account"  onclick={handleClick}>
+        </lightning-button>
+    </lightning-card>
+</template>

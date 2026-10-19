@@ -1,0 +1,15 @@
+.conWithAcc
+{
+   width: auto;
+   border-radius: 2px;
+   padding-left: 2px;
+   padding-right: 2px;
+   padding-top: 2px;
+   padding-bottom: 2px;
+   margin: 2px 2px 2px 2px;
+   background-color: antiquewhite;
+}
+.conWithAcc-button{
+    padding-left: 10px;
+    margin-left: 20px;
+}

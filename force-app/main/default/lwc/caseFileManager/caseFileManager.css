@@ -1,0 +1,30 @@
+.original-row {
+    background-color: #f3f3f3;
+}
+
+.duplicate-row {
+    background-color: #ddef53d5;
+    font-weight: 500;
+}
+.selected-cell {
+    background-color: lightgreen !important;
+    font-weight: 600;
+}
+.table-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.table-container table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+}
+
+.table-container th,
+.table-container td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

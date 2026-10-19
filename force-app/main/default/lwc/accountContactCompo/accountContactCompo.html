@@ -1,0 +1,37 @@
+<template>
+  <div>
+    <lightning-card title="Account and Contact Component" icon-name="standard:account" variant="base">
+      <div>
+        <!--Account Input-->
+        <lightning-input 
+          type="text" name="Name"
+          label="Account Name"
+          required onchange={handleAccountInput}>
+        </lightning-input>
+        <!--Contact Input-->
+        <lightning-input 
+          type="text" name="FirstName"
+          label="First Name"
+          required onchange={handleContactInput}>
+        </lightning-input>
+        <lightning-input 
+          type="text" name="LastName"
+          label="Last Name"
+          required onchange={handleContactInput}>
+        </lightning-input>
+        <lightning-input 
+          type="email" name="Email"
+          label="Email Address"
+          required onchange={handleContactInput}>
+        </lightning-input>
+      </div>
+      <div>
+        <lightning-button 
+          variant="brand"
+          label="Create Record" 
+          onclick={handleClick} 
+        ></lightning-button>
+      </div>
+    </lightning-card>
+    </div>
+</template>

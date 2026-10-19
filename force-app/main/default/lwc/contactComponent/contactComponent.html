@@ -1,0 +1,21 @@
+<template>
+<lightning-card title="Contact With Associated Accounts">
+    <template if:true={isLoading}>
+        <lightning-spinner 
+          alternative-text="Loading Contact Details" 
+          size="xx-small"
+          variant="base"></lightning-spinner>
+    </template>
+    <lightning-datatable 
+    key-field="Id"
+        data={contactInfo}
+    columns={contactCols}
+    onrowaction={handleRowAction}>
+    </lightning-datatable>
+
+    <lightning-button variant="brand" label="Refresh Data" 
+        onclick={handleRefreshClick} >
+    </lightning-button>
+
+</lightning-card>
+</template>

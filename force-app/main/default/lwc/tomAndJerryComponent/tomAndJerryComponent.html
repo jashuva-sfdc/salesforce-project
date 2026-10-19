@@ -1,0 +1,29 @@
+<template>
+    <div if:true={showTom}>
+        <img width="200px" src="https://www.bing.com/images/search?view=detailV2&ccid=5T7xXu0D&id=6C16D6AF7C4ABDD7B8F8D0643FBFEC7B65C9C110&thid=OIP.5T7xXu0Ds1cXjnQGHocWQQHaJQ&mediaurl=https%3a%2f%2fstatic.vecteezy.com%2fsystem%2fresources%2fpreviews%2f013%2f971%2f854%2fnon_2x%2ftom-cartoon-free-vector.jpg&exph=980&expw=784&q=TOm+Images&mode=overlay&FORM=IQFRBA&ck=C23D4DD80624C4002E546AA7099B0EE6&selectedIndex=0&idpp=serp&ajaxhist=0&ajaxserp=0"
+         alt="Jerry Image" />
+       <h2>This Is Jerry</h2> 
+    </div>
+    <br></br>
+    <div if:false={showTom}>
+        <img width="200px" src="https://www.bing.com/images/search?view=detailV2&ccid=hVgph%2FcS&id=67D2A0C5A36A7C038F6B2B0EB91E928115B6DA49&thid=OIP.hVgph_cSXkho_csoZh6TTwHaJS&mediaurl=https%3A%2F%2Fpngimg.com%2Fuploads%2Ftom_and_jerry%2Ftom_and_jerry_PNG53.png&exph=2238&expw=1785&q=TOm+Images&form=IQFRBA&ck=8CDACE7B043BB44E29AB973900E67B31&selectedindex=24&ajaxhist=0&ajaxserp=0&vt=0&sim=11" 
+        alt="Tom Image"></img>
+        <h2>This is Tom</h2> 
+    </div>
+        <template lwc:if={showTom}>
+            <img width="200px" src="https://www.bing.com/images/search?view=detailV2&ccid=hVgph%2FcS&id=67D2A0C5A36A7C038F6B2B0EB91E928115B6DA49&thid=OIP.hVgph_cSXkho_csoZh6TTwHaJS&mediaurl=https%3A%2F%2Fpngimg.com%2Fuploads%2Ftom_and_jerry%2Ftom_and_jerry_PNG53.png&exph=2238&expw=1785&q=TOm+Images&form=IQFRBA&ck=8CDACE7B043BB44E29AB973900E67B31&selectedindex=24&ajaxhist=0&ajaxserp=0&vt=0&sim=11" 
+        alt="Tom Image"></img>
+        </template>
+   <template lwc:elseif={showTom}>
+     <img width="200px" src="https://www.bing.com/images/search?view=detailV2&ccid=5T7xXu0D&id=6C16D6AF7C4ABDD7B8F8D0643FBFEC7B65C9C110&thid=OIP.5T7xXu0Ds1cXjnQGHocWQQHaJQ&mediaurl=https%3a%2f%2fstatic.vecteezy.com%2fsystem%2fresources%2fpreviews%2f013%2f971%2f854%2fnon_2x%2ftom-cartoon-free-vector.jpg&exph=980&expw=784&q=TOm+Images&mode=overlay&FORM=IQFRBA&ck=C23D4DD80624C4002E546AA7099B0EE6&selectedIndex=0&idpp=serp&ajaxhist=0&ajaxserp=0"
+         alt="Jerry Image" />
+    </template>
+    <ul>
+        <template for:each={users} for:item="user">
+            <li key={user}>
+                {user.firstName},{user.lastName}
+            </li>
+        </template>
+    </ul> 
+     
+</template>

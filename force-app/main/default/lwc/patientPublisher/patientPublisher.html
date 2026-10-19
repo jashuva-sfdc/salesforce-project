@@ -1,0 +1,14 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base" title="Patient Publisher">
+      <lightning-input 
+        type="text"
+        label="Enter the Hospital Name"
+        onchange={handleOnChange}
+      ></lightning-input>
+      <lightning-button 
+        variant="brand"
+        label="Send Name" 
+        onclick={handleClick} 
+      ></lightning-button>
+    </lightning-card>
+</template>

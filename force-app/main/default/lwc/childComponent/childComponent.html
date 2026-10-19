@@ -1,0 +1,16 @@
+<template>
+    <lightning-card icon-name="standard:account" title="Child Component">
+    Data got from Parent Component <br/>
+    Patient Name :{patientName}<br/>
+    Patient Age  :{patientAge}<br/>
+    Patient Gender:{patientGender}
+    <lightning-input label="Status" type="text"  onchange={handleOnChange}>
+    </lightning-input>
+    <lightning-button 
+      variant="base"
+      label="Send Data To Parent " 
+      onclick={handleOnClick} 
+    ></lightning-button>
+    </lightning-card>
+ 
+</template>

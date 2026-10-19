@@ -1,0 +1,12 @@
+<template>
+    <lightning-card  title="Data Table View" icon-name="standard:account">
+       <p><strong>Candidate Records are</strong></p>
+      
+       <lightning-datatable
+        key-field="Id"
+        data={candidateDetails} 
+        columns={candCols}>
+       </lightning-datatable>
+
+    </lightning-card>
+</template>

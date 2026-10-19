@@ -1,0 +1,29 @@
+/* ── outer wrapper ── */
+.divClass {
+    width: 500px;
+    border: 2px solid lightgrey;
+    padding: 2px 2px 2px 2px;
+    margin: 2px 2px 2px 2px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+/* ── space between inputs ── */
+.divClass lightning-input {
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* ── update button styling ── */
+.divClass lightning-button {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+/* ── card footer text ── */
+.divClass p[slot="footer"] {
+    font-size: 12px;
+    color: #706e6b;
+    text-align: center;
+}

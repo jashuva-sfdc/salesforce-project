@@ -1,0 +1,11 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base" title="Parent Component">
+     <h2>To Do List</h2>
+        <template for:each={tasks} for:item="todo">
+        <c-to-do-items key={todo.Id}
+                      task={todo} >
+        </c-to-do-items>
+       </template>
+    </lightning-card>
+    
+</template>

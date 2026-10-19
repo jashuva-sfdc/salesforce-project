@@ -1,0 +1,18 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Record Creation Component" icon-name="standard:account">
+       <lightning-input type="text"  name="Name" label="Candidate First Name" 
+       required onchange={handleCandidateInput}>
+       </lightning-input>
+       <lightning-input type="text"  name="LastName__c" label="Candidate Last Name" 
+       required onchange={handleCandidateInput}>
+       </lightning-input>
+       <lightning-input type="email"  name="Email_Address__c" label="Candidate Email" 
+       required onchange={handleCandidateInput}>
+       </lightning-input>
+       <lightning-input type="text"  name="Phone_Number__c" label="Phone Number" 
+       onchange={handleCandidateInput} required="">
+       </lightning-input>
+       <lightning-button variant="brand" label="Create Record"  onclick={handleClick}>
+       </lightning-button>
+    </lightning-card>
+</template>

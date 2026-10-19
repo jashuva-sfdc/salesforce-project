@@ -1,0 +1,17 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base" title="Cases With Accounts">
+      <lightning-datatable
+        key-field="Id"
+        data={caseDetails}
+        columns={cols}>
+     </lightning-datatable>
+
+     <br/><br/>
+     <lightning-button
+       variant="brand"
+       label="Refresh Data" 
+       onclick={handleClickRefresh} 
+     ></lightning-button>
+    </lightning-card>
+
+</template>

@@ -1,0 +1,29 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base">
+     <lightning-input 
+       type="text"
+       label="Beauty Profile Name" disabled={isReadOnly} value={beautyProfileName}>
+    </lightning-input>
+     <lightning-input 
+       type="text"
+       label="Beauty Concern" disabled={isReadOnly} value={beautyConcern}>
+    </lightning-input>
+    <lightning-input 
+       type="text"
+       label="Product Used" disabled={isReadOnly} value={productUsed}>
+    </lightning-input>
+    <lightning-combobox
+      name="hairType"
+      label="Hair Type"
+      value={hairType}
+      options={skinTypeOptions} disabled={isReadOnly}
+    ></lightning-combobox>
+    <lightning-combobox
+      name="skinType"
+      label="Skin Type"
+      value={skinType}
+      placeholder="Select Option"
+      options={hairedOptions} disabled={isReadOnly}
+    ></lightning-combobox>
+    </lightning-card>
+</template>

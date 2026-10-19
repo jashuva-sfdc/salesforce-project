@@ -1,0 +1,15 @@
+<template>
+    <div class="divClass">
+         <lightning-card  title="Update Candidate" icon-name="standard:account">
+        <lightning-input type="email" variant="standard" name="Email_Address__c" 
+        label="Update Email" placeholder="type here..." onchange={handleUpdateInput}>
+        </lightning-input>
+        <lightning-input type="text" variant="standard" name="Phone_Number__c" 
+        label="Update Phone" onchange={handleUpdateInput}>
+        </lightning-input><br/>
+        <lightning-button variant="success" label="Update Record" onclick={handleClick}>
+        </lightning-button>
+        <p slot="footer">Card Footer</p>
+    </lightning-card>
+    </div>
+</template>

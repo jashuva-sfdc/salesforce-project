@@ -1,0 +1,57 @@
+<template>
+    <lightning-card title="External Case Search">
+        <div class="slds-grid slds-gutters slds-wrap slds-p-around_medium">
+
+            <!-- Case Status -->
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-combobox
+                    name="status"
+                    label="Case Status"
+                    placeholder="Select Case Status"
+                    options={statusOptions}
+                    value={selectedStatus}
+                    onchange={handleOnChange}>
+                </lightning-combobox>
+            </div>
+
+            <!-- Case Priority -->
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-combobox
+                    name="priority"
+                    label="Case Priority"
+                    placeholder="Select Priority"
+                    options={priorityOptions}
+                    value={selectedPriority}
+                    onchange={handleOnChange}>
+                </lightning-combobox>
+            </div>
+
+            <!-- Case Origin -->
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-combobox
+                    name="origin"
+                    label="Case Origin"
+                    placeholder="Select Origin"
+                    options={originOptions}
+                    value={selectedOrigin}
+                    onchange={handleOnChange}>
+                </lightning-combobox>
+            <br/>
+            </div>
+            <div>
+            <lightning-button 
+              variant="brand"
+              label="Search Cases" 
+              onclick={handleClickSearch} disabled={isSearchDisabled}
+            >
+            </lightning-button>
+            <br/>
+            <lightning-button 
+              variant="brand"
+              label="Clear Search" 
+              onclick={handleClickClear} 
+            ></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>

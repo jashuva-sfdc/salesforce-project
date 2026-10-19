@@ -1,0 +1,12 @@
+<template>
+    <lightning-card icon-name="standard:account" variant="base" title="Sending Data Component">
+     <lightning-input 
+       type="text"
+       label="Enter The Name" placeholder="Text here...." onchange={handleOnChange} name="fullName">
+    </lightning-input> 
+    <lightning-input type="phone" label="Phone" onchange={handleOnChange} name="phone">
+    </lightning-input>
+    <lightning-button variant="brand" label="Send Data" onclick={handleClick} >
+    </lightning-button>
+    </lightning-card>
+</template>
